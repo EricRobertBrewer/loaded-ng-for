@@ -34,8 +34,8 @@ export class AppComponent implements OnInit {
         }
     }
 
-    public onItemLabelLoaded(event, id: number) {
-        console.log("Loaded item: "+id);
+    public onItemLabelLoaded(event) {
+        console.log("Loaded item: "+event.object.get("id"));
         // call a function here using 'id'
     }
 

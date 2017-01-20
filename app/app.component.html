@@ -4,6 +4,6 @@
 </ActionBar>
 <StackLayout>
     <DockLayout *ngFor="let item of currentItems">
-        <Label text="{{'Item '+item.id}}" (loaded)="onItemLabelLoaded($event, item.id)"></Label>
+        <Label text="{{'Item '+item.id}}" id="{{item.id}}" (loaded)="onItemLabelLoaded($event)"></Label>
     </DockLayout>
 </StackLayout>
