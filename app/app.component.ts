@@ -36,6 +36,9 @@ export class AppComponent implements OnInit {
 
     public onItemLabelLoaded(event) {
         console.log("Loaded item: "+event.object.get("id"));
+        setTimeout(() => {
+            console.log("Loaded item after 10 ms:"+event.object.get("id"));
+        }, 10);
         // call a function here using 'id'
     }
 
