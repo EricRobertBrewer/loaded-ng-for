@@ -1,2 +1,9 @@
+<ActionBar>
+    <ActionItem text="Mix" (tap)="onMixTapped($event)" ios.position="right" android.position="actionBarIfRoom">
+    </ActionItem>
+</ActionBar>
 <StackLayout>
+    <DockLayout *ngFor="let item of currentItems">
+        <Label text="{{'Item '+item.id}}" (loaded)="onItemLabelLoaded($event, item.id)"></Label>
+    </DockLayout>
 </StackLayout>
